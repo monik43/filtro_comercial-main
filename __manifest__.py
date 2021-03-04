@@ -12,8 +12,7 @@
     'category': 'Sales',
     'version': '11.0.0.1',
 
-    # any module necessary for this one to work correctly
-    'depends': ['base', 'hr'],
+    'depends': ['base', 'helpdesk', 'mrp_repair'],
     
     'data': [
         'views/inherited_form_view.xml',
