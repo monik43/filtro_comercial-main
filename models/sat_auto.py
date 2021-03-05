@@ -6,7 +6,6 @@ class repairInherit(models.Model):
 
     @api.onchange('x_ticket')
     def onchange_x_ticket(self):
-        if self.x_ticket and self.x_ticket.exists():
-            print(self)
-            print(self.x_ticket)
+        pacients = self.env['hospital.patient'].search([])
+        print("pacients = ", pacients)
         

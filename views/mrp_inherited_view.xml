@@ -6,13 +6,9 @@
             <field name="model">mrp.repair</field>
             <field name="inherit_id" ref="mrp_repair.view_repair_order_form"/>
             <field name="arch" type="xml">
-
             <header>
                 <button name="rellenar_campos" string="Autocompletar" type="object" class="oe_highlight"/>
             </header>
-                <xpath expr="//field[@name='x_ticket']" position="before">
-                    <button name="rellenar_campos" string="Autocompletar" type="object" class="oe_highlight"/>
-                </xpath>
             </field>
         </record>
     </data>
