@@ -9,4 +9,4 @@ class repairInherit(models.Model):
     def print_repair_order(self):
         hd = self.env['helpdesk.ticket'].browse(1317)
         #repair = self.env['helpdesk.ticket'].search(['hd.id', '=', 'name'])
-        print(hd.name)
+        print(hd)
