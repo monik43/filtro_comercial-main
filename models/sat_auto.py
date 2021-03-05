@@ -4,8 +4,7 @@ from odoo import models, fields, api
 class repairInherit(models.Model):
     _inherit = 'mrp.repair'
 
-    @api.onchange('x_ticket')
-    def onchange_x_ticket(self):
-        pacients = self.env['hospital.patient'].search([])
-        print("pacients = ", pacients)
-        
+    @api.multi
+    def print_repair_order(self):
+        repair = self.env['mrp.repair'].search([])
+        print(repair)
