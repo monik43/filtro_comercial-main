@@ -2,11 +2,11 @@
 from odoo import models, fields, api
 
 
-class helpdeskTicket(models.Model):
-    _inherit = 'helpdesk.ticket'
+class repairInherit(models.Model):
+    _inherit = 'mrp.repair'
 
-    @api.onchange('x_ordensat')
-    def prueba(self):
-
-        repair = self.env['helpdesk.ticket'].search([])
+    @api.onchange('x_ticket')
+    def print_repair_order(self):
+            
+        repair = self.env['helpdesk.ticket'].search(['self.env[\'helpdesk.ticket\'].id', '=', 'self.name'])
         print(repair)
