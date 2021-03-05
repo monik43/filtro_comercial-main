@@ -7,6 +7,6 @@ class repairInherit(models.Model):
 
     @api.onchange('x_ticket')
     def print_repair_order(self):
-            
-        repair = self.env['helpdesk.ticket'].search([self.env['id'], '=', self.name])
+        hd = self.env['helpdesk.ticket']
+        repair = self.env['helpdesk.ticket'].search(['hd.id', '=', 'self.name'])
         print(repair)
