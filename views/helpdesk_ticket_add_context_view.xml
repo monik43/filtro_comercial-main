@@ -6,8 +6,8 @@
             <field name="model">helpdesk.ticket</field>
             <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='assign_ticket_to_self']" position="after">
-                    <button name="create_sat_order" string="Crear Orden SAT" type="object" class="oe_highlight"/>
+                <xpath expr="//field[@name='x_ordensat']" position="attributes">
+                    <attribute name="context">{'name': id, 'lot_id': x_sn, 'partner_id': partner_id}</attribute>
                 </xpath>
             </field>
         </record>
