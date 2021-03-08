@@ -15,6 +15,7 @@
     'depends': ['base', 'helpdesk', 'mrp_repair'],
     
     'data': [
-        'views/inherited_form_view.xml',
+        'views/res_partner_add_filter_view.xml',
+        'views/helpdesk_ticket_add_button_view.xml',
     ],
 }

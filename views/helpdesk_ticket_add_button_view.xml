@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="helpdesk_ticket_inherit_view_form" model="ir.ui.view">
+            <field name="name">helpdesk.ticket.inherit.form.view</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='assign_ticket_to_self']" position="after">
+                    <button name="create_sat_order" string="Crear Orden SAT" type="object" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
