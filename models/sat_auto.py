@@ -7,4 +7,4 @@ class repairInherit(models.Model):
 class helpdeskInherit(models.Model):
     _inherit: 'helpdesk.ticket'
 
-    orden_sat = field.Many2one('mrp.repair', string='Orden SAT')
+    orden_sat = fields.Many2one('mrp.repair', string='Orden SAT')
