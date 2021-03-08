@@ -7,9 +7,9 @@ class repairInherit(models.Model):
 
     @api.multi
     def create_sat_order(self):
-        ticket = helpdeskInherit()
+        ticket = helpdeskInherit()._get_actual_record()
 
-        hd = self.env['helpdesk.ticket'].browse(ticket._get_actual_record().id)
+        hd = self.env['helpdesk.ticket'].browse(ticket.id)
         #repair = self.env['helpdesk.ticket'].search(['hd.id', '=', 'name'])
         self.name = hd.name
 
