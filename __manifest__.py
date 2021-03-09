@@ -12,7 +12,7 @@
     'category': 'Sales',
     'version': '11.0.0.1',
 
-    'depends': ['base', 'helpdesk', 'mrp_repair'],
+    'depends': ['base', 'helpdesk', 'mrp_repair', 'product'],
     
     'data': [
         'views/res_partner_add_filter_view.xml',
