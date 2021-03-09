@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-from . import sat_auto
+from . import hd_inherit
