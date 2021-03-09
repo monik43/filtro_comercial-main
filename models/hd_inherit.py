@@ -2,7 +2,7 @@
 from odoo import models, fields, api
 
 
-class ticketInherit(models.Model):
+class HelpdeskTicket(models.Model):
     _inherit: 'helpdesk.ticket'
 
     campo_orden_sat = fields.Many2one(
