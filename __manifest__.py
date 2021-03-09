@@ -16,6 +16,6 @@
     
     'data': [
         'views/res_partner_add_filter_view.xml',
-        'views/helpdesk_ticket_add_context_view.xml',
+        #'views/helpdesk_ticket_add_context_view.xml',
     ],
 }
