@@ -6,3 +6,5 @@ class helpdeskticket(models.Model):
     _inherit: 'helpdesk.ticket'
 
     campo_orden_sat = fields.Many2one('mrp.repair', ondelete='set null', string="Orden SAT")
+
+    prueba = fields.Char()
