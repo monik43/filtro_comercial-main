@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='sla_active']" position="after">
-                    <field name="orden_sat" context="{'default_name':id, 'default_lot_id':x_sn, 'default_partner_id':partner_id}"/>
+                    <field name='campo_orden_sat' context="{'default_name':id, 'default_lot_id':x_sn, 'default_partner_id':partner_id}"/>
                 </xpath>
             </field>
         </record>
