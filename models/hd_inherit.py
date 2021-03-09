@@ -9,5 +9,4 @@ class helpdeskticket(models.Model):
     product_id = fields.Many2one('product.product', ondelete='set null', string="Producto a reparar")
     lot_id = fields.Many2one('stock.production.lot', ondelete='set null', string="Lote/Nº de serie")
     serial_n = fields.Char()
-
-    
+    print(x_sn)
