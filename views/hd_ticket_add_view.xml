@@ -10,7 +10,7 @@
                     <field name="campo_orden_sat" context="{'default_name':id, 'default_lot_id':x_sn, 'default_partner_id':partner_id}"/>
                 </xpath>
                 <xpath expr="//field[@name='x_sn']" position="after">
-                    <field name="serial_n"/>
+                    <field name="serial_n" context="{'default_serial_n':x_sn}"/>
                 </xpath>
             </field>
         </record>
