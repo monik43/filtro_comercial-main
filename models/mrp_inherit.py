@@ -7,4 +7,5 @@ class mrprepair(models.Model):
     @api.multi
     def action_etiqueta_impr(self):
         for rec in self:
-            print('/' * 33 + ' hola mundo!')
+            raise ValidationError(
+                'Hola mundo!!!') 
