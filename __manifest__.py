@@ -16,6 +16,7 @@
     
     'data': [
         'views/res_partner_add_filter_view.xml',
+        'views/mrp_repair_add_btn.xml'
         #'views/hd_ticket_add_view.xml',
     ],
 }
