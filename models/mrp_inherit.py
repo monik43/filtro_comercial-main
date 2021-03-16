@@ -6,4 +6,5 @@ class mrprepair(models.Model):
 
     @api.multi
     def action_etiqueta_impr(self):
-        print('/' * 33 + ' hola mundo!')
+        for rec in self:
+            print('/' * 33 + ' hola mundo!')
