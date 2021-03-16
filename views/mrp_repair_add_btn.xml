@@ -6,7 +6,7 @@
             <field name="model">mrp.repair</field>
             <field name="inherit_id" ref="mrp_repair.view_repair_order_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='action_repair_cancel']" position="after">
+                <xpath expr="//field[@name='action_send_mail']" position="after">
                     <button name="action_etiqueta_impr" string="Imprimir etiqueta" />
                 </xpath>
             </field>
