@@ -1,15 +1,10 @@
 <?xml version="1.0"?>
 <odoo>
     <data>
-        <record id="mrp_repair_inherit_view_form" model="ir.ui.view">
-            <field name="name">mrp.repair.inherit.form.view</field>
-            <field name="model">mrp.repair</field>
-            <field name="inherit_id" ref="mrp_repair.view_repair_order_form"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='lot_id']" position="attributes">
-                    <attribute name="context">{'default_name':lot_id}</attribute>
-                </xpath>
-            </field>
+        <record id="mrp_repair_add_button" model="ir.actions.act_window">
+            <field name="name">Imprimir etiqueta</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.repair</field>
         </record>
     </data>
 </odoo>
