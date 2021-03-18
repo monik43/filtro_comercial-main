@@ -17,7 +17,7 @@
     </record>
 
     <report
-            id="report_etiqueta_sat"
+            id="action_report_etiqueta_sat"
             model="mrp.repair"
             string="Etiqueta SAT"
             report_type="qweb-pdf"

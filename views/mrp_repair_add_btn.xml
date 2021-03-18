@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="mrp_repair.view_repair_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//button[@name='action_send_mail']" position="after">
-                    <button name="action_etiqueta_impr" string="Imprimir etiqueta" type="object"/>
+                    <button name="action_etiqueta_impr" states="draft" string="Imprimir etiqueta" type="object"/>
                 </xpath>
             </field>
         </record>
