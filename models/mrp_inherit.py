@@ -5,5 +5,5 @@ class mrprepair(models.Model):
     _inherit = 'mrp.repair'
 
     @api.multi
-    def action_etiqueta_impr(self):
+    def report_etiqueta_sat_label(self):
         return self.env.ref('mrp_repair.report_etiqueta_sat_label').report_action(self)
