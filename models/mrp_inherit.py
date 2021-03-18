@@ -6,5 +6,4 @@ class mrprepair(models.Model):
 
     @api.multi
     def action_etiqueta_impr(self):
-        for rec in self:
-            print('/' * 33 + ' hola mundo!')
+        return self.env.ref('helpdesk_ticket.report_etiqueta_sat').report_action(self)
