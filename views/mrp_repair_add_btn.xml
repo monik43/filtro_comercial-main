@@ -21,7 +21,5 @@
             <field name="help">Create new daily transaction.</field>            <!-- help text for our model -->
         </record>
 
-        <menuitem action="report_etiqueta_sat_1" id="menu_action_etiqueta"/>
-
     </data>
 </odoo>
