@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <data>
-    <template id="report_etiqueta_sat_label">
+    <template id="mrp_repair.report_etiqueta_sat_label">
       <t t-name="mrp_repair.report_etiqueta_sat_label">
         <t t-call="web.html_container">
           <t t-foreach="docs" t-as="o">
