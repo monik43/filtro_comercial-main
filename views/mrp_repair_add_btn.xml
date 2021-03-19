@@ -12,7 +12,7 @@
             </field>
         </record>
 
-        <record id="report_etiqueta_sat_label" model="ir.actions.report">
+        <record id="mrp_repair.report_etiqueta_sat_label" model="ir.actions.report">
             <field name="name">cloudalia_mrp.repair.actions.report</field>
             <field name="model">mrp.repair</field>
             <field name="report_type">qweb-pdf</field>
