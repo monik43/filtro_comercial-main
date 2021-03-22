@@ -18,13 +18,13 @@
         </record>
 
         <report 
-            id="action_report_etiqueta_sat" 
+            id="report_etiqueta_sat" 
             model="helpdesk.ticket" 
             string="Etiqueta SAT" 
             report_type="qweb-pdf" 
             paperformat="paperformat_attendance_recap_report" 
-            name="filtro_comercial.report_etiqueta_sat_label_cloudalia" 
-            file="filtro_comercial.report_etiqueta_sat_label_cloudalia" 
+            name="helpdesk.report_etiqueta_sat_label_cloudalia" 
+            file="helpdesk.report_etiqueta_sat_label_cloudalia" 
             print_report_name="('Orden SAT - %s' % (object.id))" 
         />
 
