@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="report.paperformat" id="paperformat_attendance_recap_report">
+            <field name="name">paperformat.attendance.recap.report</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_width">29</field>
+            <field name="page_height">40</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">2</field>
+            <field name="margin_right">2</field>
+            <field name="margin_bottom">2</field>
+            <field name="margin_left">2</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">20</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report 
+            id="action_report_etiqueta_sat" 
+            model="helpdesk.ticket" 
+            string="Etiqueta SAT" 
+            report_type="qweb-pdf" 
+            paperformat="paperformat_attendance_recap_report" 
+            name="filtro_comercial.report_etiqueta_sat_label_cloudalia" 
+            file="filtro_comercial.report_etiqueta_sat_label_cloudalia" 
+            print_report_name="('Orden SAT - %s' % (object.id))" 
+        />
+
+    </data>
+</odoo>
