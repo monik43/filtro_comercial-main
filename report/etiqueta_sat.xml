@@ -7,26 +7,16 @@
                         <h2>Stock Inventory</h2>
 
                         <table class="table table-condensed">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <strong>Inventory</strong>
-                                    </th>
-                                    <th>
-                                        <strong>Date</strong>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <span t-field="o.id"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="o.create_date"/>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tr>
+                                <th>
+                                    <strong>Inventory: </strong>
+                                    <t t-esc="o.id"/>
+                                </th>
+                                <th>
+                                    <strong>Date</strong>
+                                    <t t-esc="o.create_date"/>
+                                </th>
+                            </tr>
                         </table>
                     </div>
                 </t>
