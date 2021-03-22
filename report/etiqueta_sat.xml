@@ -3,22 +3,8 @@
         <template id="report_etiqueta_sat_label_cloudalia">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
-                        <div class="article">
-                            <h2>Stock Inventory</h2>
-
-                            <table class="table table-condensed">
-                                <tr>
-                                    <th>
-                                        <strong>Inventory: </strong>
-                                        <t t-esc="o.id"/>
-                                    </th>
-                                    <th>
-                                        <strong>Date</strong>
-                                        <t t-esc="o.create_date"/>
-                                    </th>
-                                </tr>
-                            </table>
-                        </div>
+                    <h2>Test</h2>
+                    <t t-esc="o.id"/>
                 </t>
             </t>
         </template>
