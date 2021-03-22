@@ -23,13 +23,13 @@
             string="Etiqueta SAT" 
             report_type="qweb-pdf" 
             paperformat="paperformat_attendance_recap_report" 
-            name="helpdesk.cloud_report_etiqueta_sat_label" 
-            file="helpdesk.cloud_report_etiqueta_sat_label" 
+            name="helpdesk.report_etiqueta_sat_label_cloudalia" 
+            file="helpdesk.report_etiqueta_sat_label_cloudalia" 
             print_report_name="('Orden SAT - %s' % (object.id))" 
         />
 
-        <template id="cloud_report_etiqueta_sat_label">
-            <t t-name="helpdesk.cloud_report_etiqueta_sat_label">
+        <template id="report_etiqueta_sat_label_cloudalia">
+            <t t-name="helpdesk.report_etiqueta_sat_label_cloudalia">
                 <t t-call="web.html_container">
                     <t t-foreach="docs" t-as="o">
                         <t t-call="web.external_layout">
