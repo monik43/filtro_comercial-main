@@ -6,4 +6,4 @@ class mrprepair(models.Model):
 
     @api.multi
     def report_etiqueta_sat_label(self):
-        return self.env.ref('mrp_repair.report_etiqueta_sat_label').report_action(self)
+        return self.env.ref('helpdesk.report_etiqueta_sat').report_action(self)
