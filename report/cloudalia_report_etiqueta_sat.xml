@@ -19,7 +19,7 @@
     <report
             id="cd_report_etiqueta_sat"
             model="helpdesk.ticket"
-            string="Etiqueta SAT"
+            string="Etiqueta SAT nueva"
             report_type="qweb-pdf"
             paperformat="cloudalia_paperformat_attendance_recap_report"
             name="helpdesk.report_etiqueta_sat_label"
