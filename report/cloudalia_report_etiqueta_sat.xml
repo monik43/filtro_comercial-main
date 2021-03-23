@@ -22,8 +22,8 @@
     string="Etiqueta SAT nueva" 
     report_type="qweb-pdf" 
     paperformat="cd_paperformat_attendance_recap_report" 
-    name="helpdesk.cd_report_etiqueta_sat_label" 
-    file="helpdesk.cd_report_etiqueta_sat_label" 
+    name="filtro_comercial.cd_report_etiqueta_sat_label" 
+    file="filtro_comercial.cd_report_etiqueta_sat_label" 
     print_report_name="('Repair Order - %s' % (object.id))" 
   />
 
