@@ -1,63 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record model="report.paperformat" id="cloudalia_paperformat_attendance_recap_report">
-        <field name="name">cloudalia_paperformat.attendance.recap.report</field>
-        <field name="default" eval="True"/>
-        <field name="format">custom</field>
-        <field name="page_width">29</field>
-        <field name="page_height">40</field>
-        <field name="orientation">Landscape</field>
-        <field name="margin_top">2</field>
-        <field name="margin_right">2</field>
-        <field name="margin_bottom">2</field>
-        <field name="margin_left">2</field>
-        <field name="header_line" eval="False"/>
-        <field name="header_spacing">20</field>
-        <field name="dpi">90</field>
-    </record>
+  <record model="report.paperformat" id="cloudalia_paperformat_attendance_recap_report">
+    <field name="name">cloudalia_paperformat.attendance.recap.report</field>
+    <field name="default" eval="True"/>
+    <field name="format">custom</field>
+    <field name="page_width">29</field>
+    <field name="page_height">40</field>
+    <field name="orientation">Landscape</field>
+    <field name="margin_top">2</field>
+    <field name="margin_right">2</field>
+    <field name="margin_bottom">2</field>
+    <field name="margin_left">2</field>
+    <field name="header_line" eval="False"/>
+    <field name="header_spacing">20</field>
+    <field name="dpi">90</field>
+  </record>
 
-    <report
-            id="cd_report_etiqueta_sat"
-            model="helpdesk.ticket"
-            string="Etiqueta SAT nueva"
-            report_type="qweb-pdf"
-            paperformat="cloudalia_paperformat_attendance_recap_report"
-            name="helpdesk.report_etiqueta_sat_label2"
-            file="helpdesk.report_etiqueta_sat_label"
-            print_report_name="('Repair Order - %s' % (object.id))"
-    />
+  <report id="cd_report_etiqueta_sat" model="helpdesk.ticket" string="Etiqueta SAT nueva" report_type="qweb-pdf" paperformat="cloudalia_paperformat_attendance_recap_report" file="helpdesk.report_etiqueta_sat_label" print_report_name="('Repair Order - %s' % (object.id))" />
 
-    <template id="report_etiqueta_sat_label">
-        <t t-name="helpdesk.report_etiqueta_sat_label2">
-            <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="o">
-             <t t-call="web.external_layout">
-                        <div class="page">
-                            <h2>Stock Inventory</h2>
+  <template id="report_etiqueta_sat_label">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.external_layout">
+          <div class="page">
+            <h2>Stock Inventory</h2>
 
-                              <table class="table table-condensed">
-                                <thead>
-                                  <tr>
-                                    <th><strong>Inventory</strong></th>
-                                    <th><strong>Date</strong></th>
-                                  </tr>
-                                </thead>
-                              <tbody>
-                                <tr>
-                                    <td>
-                                        <span t-field="o.id"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="o.create_date"/>
-                                    </td>
-                                </tr>
-                              </tbody>
-                              </table>
-                        </div>
-             </t>
-            </t>
-            </t>
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>Inventory</strong>
+                  </th>
+                  <th>
+                    <strong>Date</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span t-field="o.id"/>
+                  </td>
+                  <td>
+                    <span t-field="o.create_date"/>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </t>
-    </template>
+      </t>
+    </t>
+
+  </template>
 
 </odoo>
