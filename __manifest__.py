@@ -17,8 +17,7 @@
     'data': [
         'views/res_partner_add_filter_view.xml',
         'views/mrp_repair_add_btn.xml',
-        'report/mrp_repair_report.xml',
-        'report/etiqueta_sat.xml'
+        'report/report_etiqueta_sat.xml'
         #'views/hd_ticket_add_view.xml',
     ],
 }
