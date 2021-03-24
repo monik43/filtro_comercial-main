@@ -10,5 +10,5 @@ class mrprepair(models.Model):
             tickets = self.env['helpdesk.ticket'].search([])
 
 
-            print('//////////////////////////////////////////////////////////////////////////////' + tickets)
+            print(f'////////////////////////////////////////////////////////////////////////////// {tickets}')
         #return self.env.ref('filtro_comercial.cd_report_etiqueta_sat').report_action(self)
