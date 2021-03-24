@@ -39,9 +39,10 @@
                 </b>
               </h2>
               <p>
-                Entrada: 
+                <b>Entrada:</b> 
                 <t t-esc="o.create_date" t-options='{"widget": "date"}'/>
-                SN: 
+                <br />
+                <b>SN:</b> 
                 <t t-esc="o.x_sn" />
               </p>
             </div>
