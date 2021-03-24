@@ -36,8 +36,6 @@
                 <b style="text-align:center;">
                   <t t-esc="o.id" />
                 </b>
-              Entrada: 
-              <t t-esc="o.create_date" />
               SN: 
               <t t-esc="o.x_sn" />
             </div>
