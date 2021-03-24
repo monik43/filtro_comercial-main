@@ -5,7 +5,7 @@ from odoo import models, fields, api
 class helpdeskticket(models.Model):
     _inherit = 'helpdesk.ticket'
 
-    fecha_entrada = create_date[-8]
+    fecha_entrada = self.create_date[-8]
 
     campo_orden_sat = fields.Many2one('mrp.repair', ondelete='set null', string="Orden SAT")
     product_id = fields.Many2one('stock.production.lot', ondelete='set null', string="Producto a reparar")
