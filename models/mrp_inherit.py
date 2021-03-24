@@ -11,4 +11,7 @@ class mrprepair(models.Model):
 
 
             print(f'////////////////////////////////////////////////////////////////////////////// {tickets}')
+            print(self.id)
+
+        
         #return self.env.ref('filtro_comercial.cd_report_etiqueta_sat').report_action(self)
