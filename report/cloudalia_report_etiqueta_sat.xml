@@ -39,7 +39,7 @@
                 </b>
               </h2>
               <br />
-              <div style="border-bottom-style: solid; border-bottom-width: 1px;">
+              <div style="border-bottom-style: solid; border-bottom-width: 0.5px;">
               <b>Entrada:</b>
               <t t-esc="o.create_date" t-options='{"widget": "date"}'/>
               </div>
