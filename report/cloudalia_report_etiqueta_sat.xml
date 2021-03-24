@@ -38,7 +38,7 @@
                   <t t-esc="o.id" />
                 </b>
               </h2>
-              <tr>
+              <tr style="font-size:2px;">
                 <th>Entrada:</th> 
                 <td><t t-esc="o.create_date" t-options='{"widget": "date"}'/></td>
                 <br />
