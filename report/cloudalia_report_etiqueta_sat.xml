@@ -16,16 +16,7 @@
     <field name="dpi">90</field>
   </record>
 
-<report 
-    id="cd_report_etiqueta_sat" 
-    model="helpdesk.ticket" 
-    string="Etiqueta SAT nueva" 
-    report_type="qweb-pdf" 
-    paperformat="cd_paperformat_attendance_recap_report" 
-    name="filtro_comercial.cd_report_etiqueta_sat_label" 
-    file="filtro_comercial.cd_report_etiqueta_sat_label" 
-    print_report_name="('Etiqueta SAT - %s' % (object.id))" 
-  />
+
 
   <template id="cd_report_etiqueta_sat_label">
     <t t-name="filtro_comercial.cd_report_etiqueta_sat_label">
@@ -33,15 +24,15 @@
         <t t-foreach="docs" t-as="o">
           <t t-call="web.basic_layout">
             <div class="page">
-              <h3 style="text-align:center;">
+              <h2 style="text-align:center;">
                 <b>
                   <t t-esc="o.id" />
                 </b>
               </h2>
               <p>
-              Entrada: 
+                Entrada: 
                 <t t-esc="o.create_date" />
-              SN: 
+                SN: 
                 <t t-esc="o.x_sn" />
               </p>
             </div>
