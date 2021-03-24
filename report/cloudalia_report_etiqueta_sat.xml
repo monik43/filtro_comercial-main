@@ -40,7 +40,7 @@
               </h2>
               <p>
                 Entrada: 
-                <t t-esc="o.create_date" />
+                <t t-esc="o.create_date" t-field-options='{"format": "d MMMM y"}'/>
                 SN: 
                 <t t-esc="o.x_sn" />
               </p>
