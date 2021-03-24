@@ -8,5 +8,5 @@ class mrprepair(models.Model):
     def report_etiqueta_sat_label(self):
 
         ticket_id = self.env['helpdesk.ticket'].browse(self.name[:4])
-        print(ticket_id)
+        print(f'/'*20,'ticket_id')
         #return self.env.ref('filtro_comercial.cd_report_etiqueta_sat').report_action(self)
