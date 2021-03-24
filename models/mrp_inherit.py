@@ -6,6 +6,6 @@ class mrprepair(models.Model):
 
     @api.multi
     def report_etiqueta_sat_label(self):
-        
+
         ticket_id = self.env['helpdesk.ticket'].browse(self.name[:4])
-        return self.env.ref('filtro_comercial.cd_report_etiqueta_sat').report_action(self)
+        #return self.env.ref('filtro_comercial.cd_report_etiqueta_sat').report_action(self)
