@@ -33,16 +33,15 @@
         <t t-foreach="docs" t-as="o">
           <t t-call="web.basic_layout">
             <div class="page">
-              <h2 style="text-align: center;">
+              <h3 style="text-align:center;">
                 <b>
                   <t t-esc="o.id" />
                 </b>
               </h2>
               <p>
               Entrada: 
-                <t t-esc="o.fecha_entrada" />
-              </p>
-              <p>SN: 
+                <t t-esc="o.create_date" />
+              SN: 
                 <t t-esc="o.x_sn" />
               </p>
             </div>
