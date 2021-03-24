@@ -7,7 +7,8 @@ class mrprepair(models.Model):
     @api.multi
     def report_etiqueta_sat_label(self):
         for record in self:
-            tickets = self.env['helpdesk.ticket'].browse(1249)
+            idaaa = 1249
+            tickets = self.env['helpdesk.ticket'].browse(idaaa)
 
 
             print(f'////////////////////////////////////////////////////////////////////////////// {tickets.id}')
