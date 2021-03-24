@@ -6,4 +6,5 @@ class mrprepair(models.Model):
 
     @api.multi
     def report_etiqueta_sat_label(self):
+        self.ensure_one()
         return self.env.ref('filtro_comercial.cd_report_etiqueta_sat').report_action(self)
