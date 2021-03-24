@@ -38,13 +38,13 @@
                   <t t-esc="o.id" />
                 </b>
               </h2>
-              <p>
-                <b>Entrada:</b> 
-                <t t-esc="o.create_date" t-options='{"widget": "date"}'/>
+              <tr>
+                <th>Entrada:</th> 
+                <td><t t-esc="o.create_date" t-options='{"widget": "date"}'/></td>
                 <br />
+              </tr>
                 <b>SN:</b> 
                 <t t-esc="o.x_sn" />
-              </p>
             </div>
           </t>
         </t>
