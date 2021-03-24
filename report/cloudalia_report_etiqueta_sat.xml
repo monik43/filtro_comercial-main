@@ -38,11 +38,14 @@
                   <t t-esc="o.id" />
                 </b>
               </h2>
-                <b>Entrada:</b> 
-                <t t-esc="o.create_date" t-options='{"widget": "date"}'/>
-                <br />
-                <b>SN:</b> 
-                <t t-esc="o.x_sn" />
+              <br />
+              <b>Entrada:</b>
+              <t t-esc="o.create_date" t-options='{"widget": "date"}'/>
+              <br />
+              <b style="text-align: center;">---</b>
+              <br />
+              <b>SN:</b>
+              <t t-esc="o.x_sn" />
             </div>
           </t>
         </t>
