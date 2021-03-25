@@ -43,8 +43,9 @@
                 <b>Entrada </b>
                 <t t-esc="o.create_date" t-options='{"widget": "date"}' />
               </div>
-              <div>
+              <div style="font-size:10px !important;">
                 <b>SN </b>
+                <t t-esc="o.x_sn" />
               </div>
             </div>
           </t>
