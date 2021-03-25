@@ -4,7 +4,7 @@
 
     'summary': """""",
 
-    'description': """Filtro campo de comercial""",
+    'description': """Módulo que añada varias modificaciones; entre ellas un filtro para el campo comercial y la generación del pdf de una etiqueta en los tíckets de helpdesk y en las reparaciones.""",
 
     'author': "Cloudalia Educacion",
     'website': "http://www.cloudaliaeducacion.com",
