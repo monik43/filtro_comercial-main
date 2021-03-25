@@ -47,13 +47,13 @@
                 <b>SN </b>
                 <div style="text-align:center;">
                   <t t-esc="o.x_sn" />
-                  <div>
-                  </div>
                 </div>
-              </t>
-            </t>
+              </div>
+            </div>
           </t>
         </t>
-      </template>
+      </t>
+    </t>
+  </template>
 
-    </odoo>
+</odoo>
