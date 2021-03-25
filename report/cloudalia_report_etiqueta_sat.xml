@@ -45,7 +45,6 @@
               </div>
               <div>
                 <b>SN </b>
-                <t t-esc="o.x_sn" />
               </div>
             </div>
           </t>
