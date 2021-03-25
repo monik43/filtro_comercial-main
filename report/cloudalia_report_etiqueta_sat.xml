@@ -45,13 +45,15 @@
               </div>
               <div style="font-size:10px;">
                 <b>SN </b>
-                <t t-esc="o.x_sn" style="text-align: center;"/>
-              </div>
-            </div>
+                <div style="text-align:center;">
+                  <t t-esc="o.x_sn" />
+                  <div>
+                  </div>
+                </div>
+              </t>
+            </t>
           </t>
         </t>
-      </t>
-    </t>
-  </template>
+      </template>
 
-</odoo>
+    </odoo>
