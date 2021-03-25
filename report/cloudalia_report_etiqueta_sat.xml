@@ -32,7 +32,7 @@
       <t t-call="web.html_container">
         <t t-foreach="docs" t-as="o">
           <t t-call="web.basic_layout">
-            <div class="page" style="font-size: 11px !important;">
+            <div class="page" style="font-size: 11px !important; text-align: center;">
               <h2 style="text-align:center;">
                 <b>
                   <t t-esc="o.id" />
@@ -43,7 +43,7 @@
                 <b>Entrada </b>
                 <t t-esc="o.create_date" t-options='{"widget": "date"}' />
               </div>
-              <div style="font-size:10px !important; text-align:center;">
+              <div style="font-size:10px !important;">
                 <b>SN </b>
                 <t t-esc="o.x_sn" />
               </div>
