@@ -41,10 +41,10 @@
               <br />
               <div style="border-bottom-style: dotted; border-bottom-width: 1px;">
               <b>Entrada:</b>
-              <t t-esc="o.create_date" t-options='{"widget": "date"}' style="text-align:center ;"/>
+              <t t-esc="o.create_date" t-options='{"widget": "date"}' />
               </div>
               <b>SN:</b>
-              <t t-esc="o.x_sn" style="text-align:center ;"/>
+              <t t-esc="o.x_sn" />
             </div>
           </t>
         </t>
