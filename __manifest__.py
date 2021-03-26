@@ -17,7 +17,9 @@
     'data': [
         'views/res_partner_add_filter_view.xml',
         'views/mrp_repair_add_btn.xml',
-        'report/cloudalia_report_etiqueta_sat.xml'
+        'views/stock_picking_add_btn.xml',
+        'report/cloudalia_report_etiqueta_sat.xml',
+        'report/cloudalia_report_etiqueta_stock.xml'
         #'views/hd_ticket_add_view.xml',
     ],
 }
