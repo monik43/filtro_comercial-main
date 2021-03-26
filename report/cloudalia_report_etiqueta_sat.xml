@@ -43,8 +43,7 @@
                 <b>Entrada </b>
                 <t t-esc="o.create_date" t-options='{"widget": "date"}' />
               </div>
-              <div style="font-size:10px;">
-                <b>SN </b>
+              <div style="text-transform: uppercase;">
                 <t t-esc="o.x_sn" />
               </div>
             </div>
