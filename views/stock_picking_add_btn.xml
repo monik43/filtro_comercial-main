@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//header" position="inside">
-                    <button name="report_etiqueta_stock_label" states="draft" string="Imprimir etiqueta stock" type="object"/>
+                    <button name="report_etiqueta_stock_label" string="Imprimir etiqueta stock" type="object"/>
                 </xpath>
             </field>
         </record>
