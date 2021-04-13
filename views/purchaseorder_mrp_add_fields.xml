@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="cloudalia_purchase_from_repair.view_transientmodel_wizard_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='partner_id']" position="after">
-                    <field name="warehouse"/>
+                    <field name="warehouse" domain="[('code','=','incoming')]" options="{'no_create': True}"/>
                 </xpath>
             </field>
         </record>
