@@ -56,6 +56,4 @@ class createpurchaseordermrp(models.TransientModel):
             'picking_type_id': self.warehouse.id,
         })
 
-        print(50*"//")
-        print(self.warehouse)
         return res
