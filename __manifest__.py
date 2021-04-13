@@ -19,9 +19,9 @@
         'views/mrp_repair_add_btn.xml',
         'views/stock_picking_add_btn.xml',
         'views/stock_warehouse_add_type.xml',
-        'report/cloudalia_report_etiqueta_sat.xml',
-        'report/cloudalia_report_etiqueta_stock.xml',
         'views/purchaseorder_mrp_add_fields.xml',
+        'report/cloudalia_report_etiqueta_sat.xml',
+        'report/cloudalia_report_etiqueta_stock.xml'
         #'views/hd_ticket_add_view.xml',
     ],
 }
