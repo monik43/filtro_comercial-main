@@ -10,7 +10,7 @@ class createpurchaseordermrp(models.TransientModel):
     _inherit = 'create.purchaseorder_mrp'
 
     warehouse = fields.Many2one(
-        'stock.picking.type', string='Almacén', required=True)
+        'stock.picking.type', string='Recepción', required=True)
 
     @api.multi
     def action_create_purchase_order_mrp_inherit(self):
