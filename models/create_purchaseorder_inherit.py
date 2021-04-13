@@ -13,7 +13,7 @@ class createpurchaseordermrp(models.TransientModel):
         'stock.picking.type', string='Almacén', required=True)
 
     @api.multi
-    def action_create_purchase_order_mrp(self):
+    def action_create_purchase_order_mrp_inherit(self):
         self.ensure_one()
         res = self.env['purchase.order'].browse(
             self._context.get('id', []))
@@ -55,5 +55,5 @@ class createpurchaseordermrp(models.TransientModel):
             'partner_ref': mrp_repair_name,
             'picking_type_id': self.warehouse
         })
-        
+
         return res
