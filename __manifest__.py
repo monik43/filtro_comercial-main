@@ -21,7 +21,7 @@
         'views/stock_warehouse_add_type.xml',
         'report/cloudalia_report_etiqueta_sat.xml',
         'report/cloudalia_report_etiqueta_stock.xml'
-        'views/purchaseorder_mrp_add_fields',
+        'views/purchaseorder_mrp_add_fields.xml',
         #'views/hd_ticket_add_view.xml',
     ],
 }
