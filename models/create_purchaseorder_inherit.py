@@ -52,8 +52,10 @@ class createpurchaseordermrp(models.TransientModel):
             'date_order': self.date_order,
             'order_line': value,
             'origin': mrp_repair_name,
-            'partner_ref': mrp_repair_name,
-            'picking_type_id': self.warehouse
+            'partner_ref': mrp_repair_name
+            #'picking_type_id': self.warehouse
         })
 
-        return res
+        print(50*"//")
+        print(self.warehouse)
+#        return res
