@@ -9,7 +9,7 @@
                 <xpath expr="//field[@name='partner_id']" position="after">
                     <field name="warehouse" domain="[('code','=','incoming')]" options="{'no_create': True}"/>
                 </xpath>
-                <xpath expr="//button[@name='action_create_purchase_order']" position="replace">
+                <xpath expr="//button[@name='action_create_purchase_order_mrp']" position="replace">
                     <button name="action_create_purchase_order_mrp_inherit" string="Create Purchase Order" type="object" class="btn-primary"/>
                 </xpath>
                 
