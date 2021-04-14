@@ -7,7 +7,6 @@ class stockpicking(models.Model):
     @api.multi
     def report_etiqueta_stock_label(self):
 
-        print("//"*25, orden)
         print("//"*25, self.id)
         #return self.env.ref('filtro_comercial-main.cd_report_etiqueta_stock').report_action(orden)
     

@@ -19,7 +19,7 @@
                     <t t-call="web.basic_layout">
                         <div class="page" style="font-size: 11px;">
                             <p style="text-align:center;">
-                                    <t t-esc="o.picking_type_id.warehouse_id.name" /> <t t-esc="o.picking_type_id.name" />
+                                    <t t-esc="o.picking_type_id.warranty" />
                             </p>
                         </div>
                     </t>
