@@ -20,6 +20,7 @@
         'views/stock_picking_add_btn.xml',
         'views/stock_warehouse_add_type.xml',
         'views/purchaseorder_mrp_add_fields.xml',
+        'views/stock_picking_type_add_warranty.xml',
         'report/cloudalia_report_etiqueta_sat.xml',
         'report/cloudalia_report_etiqueta_stock.xml'
         #'views/hd_ticket_add_view.xml',
