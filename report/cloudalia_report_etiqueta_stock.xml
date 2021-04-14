@@ -20,7 +20,7 @@
                         <div class="page" style="font-size: 11px;">
                             <h2 style="text-align:center;">
                                 <b>
-                                    <t t-esc="o.id" />
+                                    <t t-esc="o.picking_type_id" />
                                 </b>
                             </h2>
                         </div>
