@@ -6,7 +6,7 @@ class stockpicking(models.Model):
 
     @api.multi
     def report_etiqueta_stock_label(self):
-        orden = self.env['purchase.order'].search('name','=',self.origin)
+        orden = self.env['purchase.order'].search([('name','=',self.origin)])
         print("//"*55, self.id)
         print("//"*88, orden.id)
         #return self.env.ref('filtro_comercial-main.cd_report_etiqueta_stock').report_action(orden)
