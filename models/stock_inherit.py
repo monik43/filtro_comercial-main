@@ -6,7 +6,7 @@ class stockpicking(models.Model):
 
     @api.multi
     def report_etiqueta_stock_label(self):
-        orden = self.env['purchase.order'].search(self.picking_ids[0],'=', id)
+        orden = self.env['purchase.order'].search(self.env['purchase.order'].picking_ids[0],'=', self.id)
 
         print("//"*25, orden)
         print("//"*25, self.id)
