@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<report 
-    id="cd_report_etiqueta_stock" 
-    model="stock.picking" 
-    string="Etiqueta Stock" 
-    report_type="qweb-pdf" 
-    paperformat="cd_paperformat_attendance_recap_report" 
-    name="filtro_comercial-main.report_etiqueta_stock_label" 
-    file="filtro_comercial-main.report_etiqueta_stock_label" 
-    print_report_name="('Etiqueta stock - %s' % (object.id))" 
-  />
+    <report id="cd_report_etiqueta_stock" model="stock.picking" string="Etiqueta Stock" report_type="qweb-pdf" paperformat="cd_paperformat_attendance_recap_report" name="filtro_comercial-main.report_etiqueta_stock_label" file="filtro_comercial-main.report_etiqueta_stock_label" print_report_name="('Etiqueta stock - %s' % (object.id))" />
 
     <template id="report_etiqueta_stock_label">
         <t t-name="filtro_comercial-main.report_etiqueta_stock_label">
@@ -18,13 +9,13 @@
                 <t t-foreach="docs" t-as="sp">
                     <t t-call="web.basic_layout">
                         <div class="page" style="font-size: 11px;">
-                            <p style="text-align:center;">
-                                    <t t-esc="sp.picking_type_id.warranty" />
-                                    <!-- Para llamar a variables de otro modelo, se hace como en python pero con "request" en vez de el self, y en el dominio de search se usa el t-as en lugar del -->
-                                    <t t-foreach="request.env['purchase.order'].search([('name','=',sp.origin)])" t-as="order">
-                                        <t t-esc="order.partner_ref" />
-                                    </t>
-                            </p>
+                            <h1>
+                                <t t-esc="sp.picking_type_id.warranty" style="text-align:left;"/>
+                                <!-- Para llamar a variables de otro modelo, se hace como en python pero con "request" en vez de el self, y en el dominio de search se usa el t-as en lugar del -->
+                                <t t-foreach="request.env['purchase.order'].search([('name','=',sp.origin)])" t-as="order">
+                                    <t t-esc="order.partner_ref" />
+                                </t>
+                            </h1>
                         </div>
                     </t>
                 </t>
