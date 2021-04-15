@@ -10,7 +10,7 @@ class stockpicking(models.Model):
         
         print("ID DE STOCKPICKING: " , self.id)
         print("ID DE ORDEN: " , self.orden.id)
-        return self.env.ref('filtro_comercial-main.cd_report_etiqueta_stock').report_action(self)
+        #return self.env.ref('filtro_comercial-main.cd_report_etiqueta_stock').report_action(self)
     
 class stockwarehouse(models.Model):
     _inherit = 'stock.warehouse'
