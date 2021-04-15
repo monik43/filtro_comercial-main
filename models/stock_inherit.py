@@ -8,10 +8,10 @@ class stockpicking(models.Model):
     orden = None
     @api.multi
     def report_etiqueta_stock_label(self):
-        self.orden = self.env['purchase.order'].search([('name','=',self.origin)])
+        orden = self.env['purchase.order'].search([('name','=',self.origin)])
         
         print("//"*15,"ID DE STOCKPICKING: " , self.id)
-        print("//"*15,"ID DE ORDEN: " , self.orden.id)
+        print("//"*15,"ID DE ORDEN: " , orden.id)
         return self.env.ref('filtro_comercial-main.cd_report_etiqueta_stock').report_action(self)
     
 class stockwarehouse(models.Model):
