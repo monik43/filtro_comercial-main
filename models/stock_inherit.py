@@ -4,7 +4,7 @@ from odoo import models, fields, api
 class stockpicking(models.Model):
     _inherit = 'stock.picking'
 
-
+    orden = ""
     @api.multi
     def report_etiqueta_stock_label(self):
         orden = self.env['purchase.order'].search([('name','=',self.origin)])
