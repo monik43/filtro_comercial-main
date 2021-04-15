@@ -15,12 +15,14 @@
     <template id="report_etiqueta_stock_label">
         <t t-name="filtro_comercial-main.report_etiqueta_stock_label">
             <t t-call="web.html_container">
-                <t t-foreach="docs" t-as="o">
+                <t t-foreach="docs" t-as="sp">
                     <t t-call="web.basic_layout">
                         <div class="page" style="font-size: 11px;">
                             <p style="text-align:center;">
-                                    <t t-esc="o.id" />
-                                    <t t-esc="orden.id" />
+                                    <t t-esc="sp.id" />
+                                    <t t-foreach="request.env['purchase.order'].search([('name','=',self.origin)])" t-as="order">
+                                        <t t-esc="order.id" />
+                                    </t>
                             </p>
                         </div>
                     </t>
