@@ -19,10 +19,10 @@
                     <t t-call="web.basic_layout">
                         <div class="page" style="font-size: 11px;">
                             <p style="text-align:center;">
-                                    <t t-esc="sp.id" />
+                                    <t t-esc="sp.picking_type_id.warranty" />
                                     <!-- Para llamar a variables de otro modelo, se hace como en python pero con "request" en vez de el self, y en el dominio de search se usa el t-as en lugar del -->
                                     <t t-foreach="request.env['purchase.order'].search([('name','=',sp.origin)])" t-as="order">
-                                        <t t-esc="order.id" />
+                                        <t t-esc="order.partner_ref" />
                                     </t>
                             </p>
                         </div>
