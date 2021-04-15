@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="cloudalia_helpdesk_ticket_inherit_view_form" model="ir.ui.view">
+            <field name="name">cloudalia_helpdesk.ticket.form.inherit</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="report_etiqueta_sat_label" string="Imprimir etiqueta" type="object"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
