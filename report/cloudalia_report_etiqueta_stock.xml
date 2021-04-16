@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <report id="cd_report_etiqueta_stock" model="stock.picking" string="Etiqueta Stock" report_type="qweb-pdf" paperformat="cd_paperformat_attendance_recap_report" name="filtro_comercial-main.report_etiqueta_stock_label" file="filtro_comercial-main.report_etiqueta_stock_label" print_report_name="('Etiqueta stock - %s' % (object.id))" />
+    <report 
+        id="cd_report_etiqueta_stock" 
+        model="stock.picking" 
+        string="Etiqueta Stock" 
+        report_type="qweb-pdf" 
+        paperformat="cd_paperformat_attendance_recap_report" 
+        name="filtro_comercial-main.report_etiqueta_stock_label" 
+        file="filtro_comercial-main.report_etiqueta_stock_label" 
+        print_report_name="('Etiqueta stock - %s' % (object.id))" 
+    />
 
     <template id="report_etiqueta_stock_label">
         <t t-name="filtro_comercial-main.report_etiqueta_stock_label">
