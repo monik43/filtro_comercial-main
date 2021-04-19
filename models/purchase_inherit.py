@@ -7,8 +7,8 @@ class purchaseorder(models.Model):
 
     @api.multi
     def report_etiqueta_purchase_order(self):
-
-        if 'partner_ref' in self.env['purchase.order']._fields & 'partner_ref_eti' not in self.env['purchase.order']._fields:
+        #& 'partner_ref_eti' not in self.env['purchase.order']._fields
+        if 'partner_ref' in self.env['purchase.order']._fields:
             
             self.partner_ref_eti = self.partner_ref
 
