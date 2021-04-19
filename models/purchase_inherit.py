@@ -5,9 +5,11 @@ from odoo import models, fields, api
 class purchaseorder(models.Model):
     _inherit = 'purchase.order'
 
+    partner_ref_eti = fields.Char()
+    
     @api.multi
     def report_etiqueta_purchase_order(self):
-        #& 'partner_ref_eti' not in self.env['purchase.order']._fields
+        
         if 'partner_ref' in self.env['purchase.order']._fields:
             
             self.partner_ref_eti = self.partner_ref
