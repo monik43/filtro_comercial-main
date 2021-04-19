@@ -8,7 +8,7 @@ class stockpicking(models.Model):
     @api.multi
     def report_etiqueta_stock_label(self):
         purchase_order_obj = self.pool.get('purchase.order')
-        return purchase_order_obj.report_etiqueta_purchase_order(self)
+        return purchase_order_obj.report_etiqueta_purchase_order(purchase_order_obj)
     
 class stockwarehouse(models.Model):
     _inherit = 'stock.warehouse'
