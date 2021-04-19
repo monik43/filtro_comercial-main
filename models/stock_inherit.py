@@ -7,9 +7,9 @@ class stockpicking(models.Model):
     
     @api.multi
     def report_etiqueta_stock_label(self):
-        
-        purchase_order = self.env['purchase.order'].search([('picking_ids', '=', id)])
-        return self.env.ref('filtro_comercial-main.cd_report_etiqueta_sat').report_action(purchase_order)
+        print('/'*50, self.id)
+        #purchase_order = self.env['purchase.order'].search([('picking_ids', '=', id)])
+        #return self.env.ref('filtro_comercial-main.cd_report_etiqueta_sat').report_action(purchase_order)
     
 class stockwarehouse(models.Model):
     _inherit = 'stock.warehouse'
