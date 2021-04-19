@@ -12,7 +12,7 @@
     'category': 'Sales',
     'version': '11.0.0.1',
 
-    'depends': ['base', 'helpdesk', 'mrp_repair', 'cloudalia_purchase_from_repair', 'stock'],
+    'depends': ['base', 'helpdesk', 'mrp_repair', 'cloudalia_purchase_from_repair', 'stock', 'purchase'],
 
     'data': [
         'views/res_partner_add_filter_view.xml',
