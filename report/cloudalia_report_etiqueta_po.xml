@@ -21,7 +21,6 @@
                             <h3>
                                 <t t-esc="po.picking_type_id.warranty" />
                             </h3>
-                            <br/>
                             <p style="font-size: 15px;"><t t-esc="po.partner_ref_eti" /></p>
                         </div>
                     </t>
