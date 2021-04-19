@@ -7,8 +7,8 @@ class stockpicking(models.Model):
     
     @api.multi
     def report_etiqueta_stock_label(self):
-        
-        return self.env.ref('filtro_comercial-main.cd_report_etiqueta_stock').report_action(self)
+        purchase_order_obj = self.pool.get('purchase.order')
+        return purchase_order_obj.report_etiqueta_purchase_order(self)
     
 class stockwarehouse(models.Model):
     _inherit = 'stock.warehouse'
