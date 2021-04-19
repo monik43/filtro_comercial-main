@@ -18,7 +18,8 @@
                 <t t-foreach="docs" t-as="po">
                     <t t-call="web.basic_layout">
                         <div class="page" style="font-size: 11px;">
-                            <!-- TODO -->
+                            <t t-esc="po.picking_type_id.warranty" style="text-align:left;"/>
+                            <t t-esc="po.partner_ref_eti" />
                         </div>
                     </t>
                 </t>
