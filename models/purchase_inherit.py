@@ -9,7 +9,6 @@ class purchaseorder(models.Model):
     
     @api.multi
     def report_etiqueta_purchase_order(self):
-        print('/'*50, self.picking_ids)
         if 'partner_ref' in self.env['purchase.order']._fields:
             
             self.partner_ref_eti = self.partner_ref
