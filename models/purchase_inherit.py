@@ -20,4 +20,4 @@ class purchaseorder(models.Model):
 
                 self.partner_ref_eti = self.partner_ref_eti[:17]
 
-        return self.env.ref('cd_report_etiqueta_purchase_order').report_action(self)
+        return self.env.ref('filtro_comercial-main.cd_report_etiqueta_purchase_order').report_action(self)
