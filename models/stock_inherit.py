@@ -7,7 +7,7 @@ class stockpicking(models.Model):
     
     @api.multi
     def report_etiqueta_stock_label(self):
-        purchase_order = self.env['purchase.order'].search([(self.id, 'in', 'picking_ids')])
+        purchase_order = self.env['purchase.order'].search([('picking_ids', '=', self.id)])
         return self.env.ref('filtro_comercial-main.cd_report_etiqueta_sat').report_action(purchase_order)
     
 class stockwarehouse(models.Model):
