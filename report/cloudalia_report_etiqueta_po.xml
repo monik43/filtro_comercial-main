@@ -17,7 +17,7 @@
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="po">
                     <t t-call="web.basic_layout">
-                        <div class="page" style="text-align:center; padding: 5px 0px 5px;">
+                        <div class="page" style="text-align:center; padding: 5px 0px;">
                             <h3>
                                 <t t-esc="po.picking_type_id.warranty" />
                             </h3>
