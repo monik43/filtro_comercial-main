@@ -18,13 +18,13 @@
         'views/res_partner_add_filter_view.xml',
         'views/mrp_repair_add_btn.xml',
         'views/hd_ticket_add_btn.xml',
-        'views/stock_picking_add_btn.xml',
         'views/purchaseorder_mrp_add_fields.xml',
         'views/stock_picking_type_add_warranty.xml',
         'views/purchase_order_add_btn.xml',
+        #'views/stock_picking_add_btn.xml',
         'report/cloudalia_report_etiqueta_sat.xml',
-        'report/cloudalia_report_etiqueta_stock.xml',
         'report/cloudalia_report_etiqueta_po.xml'
+        #'report/cloudalia_report_etiqueta_stock.xml'
 
     ],
 }
