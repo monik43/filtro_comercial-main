@@ -19,7 +19,6 @@
         'views/mrp_repair_add_btn.xml',
         'views/hd_ticket_add_btn.xml',
         'views/stock_picking_add_btn.xml',
-        'views/stock_warehouse_add_type.xml',
         'views/purchaseorder_mrp_add_fields.xml',
         'views/stock_picking_type_add_warranty.xml',
         'views/purchase_order_add_btn.xml',
