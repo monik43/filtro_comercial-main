@@ -39,7 +39,7 @@ class mrprepair(models.Model):
             if self.ticket_rel.x_ordensat.id != self.id:
                 self.ticket_rel.x_ordensat = self.id
 
-            if self.ticket_rel.mrprep_rel != self:
+            if self.ticket_rel.mrprep_rel != self.id:
                 self.ticket_rel.mrprep_rel = self.id
 
     @api.multi
