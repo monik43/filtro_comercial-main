@@ -20,17 +20,21 @@ class helpdeskticket(models.Model):
 
         # verificamos si tenemos el campo x_ordensat (cuestion de migracion o no)
         if ~self.x_ordensat:
-            
-            if mrp_repair.search([('ticket_rel', '=', self)]):
 
-                self.mrprep_rel = mrp_repair.search([('ticket_rel', '=', self)])
-            elif mrp_repair.search([(mrp_repair.name[:4], '=', self.id)]):
+            if ~self.mrprep_rel:
 
-                mrprep_rel = mrp_repair.search(
-                    [(mrp_repair.name[:4], '=', self.id)])
-                mrprep_rel.ticket_rel = self
+                if mrp_repair.search([('ticket_rel', '=', self)]):
+
+                    self.mrprep_rel = mrp_repair.search(
+                        [('ticket_rel', '=', self)])
+                elif mrp_repair.search([(mrp_repair.name[:4], '=', self.id)]):
+
+                    mrprep_rel = mrp_repair.search(
+                        [(mrp_repair.name[:4], '=', self.id)])
+
+                    mrprep_rel.ticket_rel = self
         else:
-            
+
             mrprep_rel = x_ordensat
             mrprep_rel.ticket_rel = self
 
