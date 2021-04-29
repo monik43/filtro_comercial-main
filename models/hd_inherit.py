@@ -40,5 +40,5 @@ class helpdeskticket(models.Model):
 
     @api.multi
     def report_etiqueta_sat_label(self):
-        assign_proper_repair(self)
+        self.assign_proper_repair(self)
         return self.env.ref('filtro_comercial-main.cd_report_etiqueta_sat').report_action(self)
