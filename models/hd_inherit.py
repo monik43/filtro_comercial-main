@@ -21,14 +21,14 @@ class helpdeskticket(models.Model):
         if hasattr(self, 'x_ordensat'):
 
             self.mrprep_rel = self.x_ordensat
-            self.mrprep_rel.ticket_rel.id = self.id
+            self.mrprep_rel.ticket_rel = self.id
         else:
             if mrp_repair.search([('ticket_rel.id', '=', self.id)]):
                 self.mrprep_rel = mrp_repair.search([('ticket_rel.id', '=', self.id)])
             elif mrp_repair.search([(mrp_repair.name[:4], '=', self.id)]):
                 self.mrprep_rel = mrp_repair.search([(mrp_repair.name[:4], '=', self.id)])
 
-                self.mrprep_rel.ticket_rel.id = self.id
+                self.mrprep_rel.ticket_rel = self.id
 
 
     @api.multi
