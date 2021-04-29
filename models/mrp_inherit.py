@@ -19,7 +19,7 @@ class mrprepair(models.Model):
             self.ticket_rel = hd_ticket.search([('x_ordensat', '=', self.id)])
 
             # verificamos si mrprep_rel existe en el ticket y si no somos nosotros nos asignamos.
-            if ticket_rel.mrprep_rel.id != self.id:
+            if self.ticket_rel.mrprep_rel.id != self.id:
                 self.ticket_rel.mrprep_rel.id = self.id
 
         # útil cuando se vaya a migrar al formulario sin x_ordensat:
@@ -27,20 +27,20 @@ class mrprepair(models.Model):
             self.ticket_rel = hd_ticket.search([('mrprep_rel.id', '=', self.id)])
 
             # verificamos si x_ordensat existe en el ticket y si no somos nosotros nos asignamos.
-            if ticket_rel.x_ordensat.id != self.id:
+            if self.ticket_rel.x_ordensat.id != self.id:
                 self.ticket_rel.x_ordensat.id = self.id
 
         # si no está asignado x_ordensat en el ticket ni el ticket_rel en nuestro modelo,
         # buscamos a partir de la string del nombre (no recomendable, falla en algunos
         # nombres donde el formato no es el correcto. por eso es la última opción)
         elif hd_ticket.search([('id', '=', self.name[:4])]):
-            ticket_rel = hd_ticket.search([('id', '=', self.name[:4])])
+            self.ticket_rel = hd_ticket.search([('id', '=', self.name[:4])])
 
-            if ticket_rel.x_ordensat.id != self.id:
-                ticket_rel.x_ordensat = self.id
+            if self.ticket_rel.x_ordensat.id != self.id:
+                self.ticket_rel.x_ordensat = self.id
 
-            if ticket_rel.mrprep_rel != self:
-                ticket_rel.mrprep_rel = self.id
+            if self.ticket_rel.mrprep_rel != self:
+                self.ticket_rel.mrprep_rel = self.id
 
     @api.multi
     def report_etiqueta_sat_label(self):
