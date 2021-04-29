@@ -18,25 +18,18 @@ class helpdeskticket(models.Model):
     def assign_proper_repair(self):
         mrp_repair = self.env['mrp.repair']
 
-        # verificamos si tenemos el campo x_ordensat (cuestion de migracion o no)
-        if ~self.x_ordensat:
+        if hasattr(self, 'x_ordensat'):
 
-            if ~self.mrprep_rel:
-
-                if mrp_repair.search([('ticket_rel', '=', self)]):
-
-                    self.mrprep_rel = mrp_repair.search(
-                        [('ticket_rel', '=', self)])
-                elif mrp_repair.search([(mrp_repair.name[:4], '=', self.id)]):
-
-                    mrprep_rel = mrp_repair.search(
-                        [(mrp_repair.name[:4], '=', self.id)])
-
-                    mrprep_rel.ticket_rel = self
+            self.mrprep_rel = self.x_ordensat
+            self.mrprep_rel.ticket_rel.id = self.id
         else:
+            if mrp_repair.search([('ticket_rel.id', '=', self.id)]):
+                self.mrprep_rel = mrp_repair.search([('ticket_rel.id', '=', self.id)])
+            elif mrp_repair.search([(mrp_repair.name[:4], '=', self.id)]):
+                self.mrprep_rel = mrp_repair.search([(mrp_repair.name[:4], '=', self.id)])
 
-            mrprep_rel = x_ordensat
-            mrprep_rel.ticket_rel = self
+                self.mrprep_rel.ticket_rel.id = self.id
+
 
     @api.multi
     def report_etiqueta_sat_label(self):
