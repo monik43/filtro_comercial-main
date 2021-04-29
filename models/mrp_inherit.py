@@ -37,10 +37,10 @@ class mrprepair(models.Model):
             ticket_rel = hd_ticket.search([('id', '=', self.name[:4])])
 
             if ticket_rel.x_ordensat.id != self.id:
-                ticket_rel.x_ordensat.id = self.id
+                ticket_rel.x_ordensat = self.id
 
             if ticket_rel.mrprep_rel != self:
-                ticket_rel.mrprep_rel.id = self.id
+                ticket_rel.mrprep_rel = self.id
 
     @api.multi
     def report_etiqueta_sat_label(self):
