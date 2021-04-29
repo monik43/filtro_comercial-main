@@ -44,5 +44,5 @@ class mrprepair(models.Model):
 
     @api.multi
     def report_etiqueta_sat_label(self):
-        self.search_and_assign_ticket(self)
+        self.search_and_assign_ticket()
         return self.env.ref('filtro_comercial-main.cd_report_etiqueta_sat').report_action(ticket_rel)
