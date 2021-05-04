@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem 
+        name="Recepcion"
+        id="menu_reception_root"
+        groups="group_purchase_manager,group_purchase_user" 
+        web_icon="filtro_comercial-main,static/description/icon_ph.png"
+        sequence="101"
+    />
+    <!--
+        groups: placeholder
+        web_icon: placeholder
+    -->
+</odoo>
