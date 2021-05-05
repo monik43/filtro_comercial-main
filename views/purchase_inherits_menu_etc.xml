@@ -14,7 +14,7 @@
         web_icon="filtro_comercial-main,static/description/icon_ph.png" 
         sequence="1" 
     />
-    
+
     <menuitem 
         id="reception_recepcionado"
         name="Recepcionado" 
@@ -28,7 +28,7 @@
         <field name="domain"></field>
         <field name="name">Recepcionado</field>
         <field name="res_model">purchase.order.line</field>
-        <field name="view_id" ref="view_purchase_order_tree_cd"/>
+        <field name="view_id" ref="purchase_order_line.view_purchase_order_tree_cd"/>
     </record>
 
     <record id="view_purchase_order_tree_cd" model="ir.ui.view">
