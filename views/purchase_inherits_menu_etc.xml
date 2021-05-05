@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="action_reception_tree" model="ir.actions.act_window">
+        <field name="context">{}</field>
+        <field name="domain"></field>
+        <field name="name">Recepcionado</field>
+        <field name="res_model">purchase.order.line</field>
+        <field name="view_id" ref="purchase.view_purchase_order_tree_cd"/>
+    </record>
+
+    <record id="view_purchase_order_tree_cd" model="ir.ui.view">
+        <field name="name">purchase.order.line.tree.cd</field>
+        <field name="model">purchase.order.line</field>
+        <field name="arch" type="xml">
+            <tree string="Purchase Order Lines" create="false">
+                <field name="order_id"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    
     <menuitem 
         id="reception_root" 
         name="Recepcion" 
@@ -22,23 +41,4 @@
         web_icon="filtro_comercial-main,static/description/icon_ph.png" 
         sequence="1" 
     />
-
-    <record id="action_reception_tree" model="ir.actions.act_window">
-        <field name="context">{}</field>
-        <field name="domain"></field>
-        <field name="name">Recepcionado</field>
-        <field name="res_model">purchase.order.line</field>
-        <field name="view_id" ref="purchase.view_purchase_order_tree_cd"/>
-    </record>
-
-    <record id="view_purchase_order_tree_cd" model="ir.ui.view">
-        <field name="name">purchase.order.line.tree.cd</field>
-        <field name="model">purchase.order.line</field>
-        <field name="arch" type="xml">
-            <tree string="Purchase Order Lines" create="false">
-                <field name="order_id"/>
-                <field name="name"/>
-            </tree>
-        </field>
-    </record>
 </odoo>
