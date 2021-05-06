@@ -16,7 +16,7 @@
     <menuitem 
         id="reception_root" 
         name="Recepcion" 
-        web_icon="filtro_comercial-main,static/description/icon.png" 
+        web_icon="filtro_comercial-main,static/description/icon_f.png" 
         sequence="101" 
     />
 
