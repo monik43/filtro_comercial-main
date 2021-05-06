@@ -17,7 +17,7 @@
         id="reception_root" 
         name="Recepcion" 
         web_icon="filtro_comercial-main,static/description/icon_ph.png" 
-        sequence="10" 
+        sequence="101" 
     />
 
     <menuitem 
