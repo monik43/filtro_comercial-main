@@ -32,6 +32,7 @@
         name="Recepcionado" 
         parent="reception_recepcionado_root"
         sequence="10" 
+        action="reception_action"
     />
     <!--
     <record id="action_reception_tree" model="ir.actions.act_window">
