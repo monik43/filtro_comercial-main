@@ -4,13 +4,13 @@
         <field name="context">{}</field>
         <field name="domain"></field>
         <field name="name">Recepcionado</field>
-        <field name="res_model">purchase.order.line</field>
-        <field name="view_id" ref="purchase.view_purchase_order_tree_cd"/>
+        <field name="res_model">filtro_comercial-main</field>
+        <field name="view_id" ref="view_purchase_order_tree_cd"/>
     </record>
 
     <record id="view_purchase_order_tree_cd" model="ir.ui.view">
         <field name="name">purchase.order.line.tree.cd</field>
-        <field name="model">purchase.order.line</field>
+        <field name="model">filtro_comercial-main</field>
         <field name="arch" type="xml">
             <tree string="Purchase Order Lines" create="false">
                 <field name="order_id"/>
