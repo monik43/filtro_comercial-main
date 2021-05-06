@@ -6,10 +6,11 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">purchase.order.line</field>
         <field name="view_mode">tree,search,form,search</field>
-        <field name="help" type="html"></field>
+        <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Recepcionado de piezas
             </p>
+        </field>
     </record>
     
     <menuitem 
@@ -32,7 +33,7 @@
         parent="reception_recepcionado_root"
         sequence="10" 
     />
-<!--
+    <!--
     <record id="action_reception_tree" model="ir.actions.act_window">
         <field name="context">{}</field>
         <field name="domain"></field>
