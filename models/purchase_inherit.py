@@ -6,6 +6,8 @@ class purchaseorder(models.Model):
     _inherit = 'purchase.order'
 
     partner_ref_eti = fields.Char()
+    move_state = fields.Char()
+    move_state = move_ids.state
     
     @api.multi
     def report_etiqueta_purchase_order(self):
