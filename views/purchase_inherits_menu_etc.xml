@@ -19,12 +19,13 @@
         <field name="model">purchase.order.line</field>
         <field name="arch" type="xml">
             <search string="product_state_search">
-                <filter string="Product state" name="product_state_search" domain="[('state', 'not in', ['done','cancel'])]">
+                <filter string="Product state" name="product_state_search" domain="[('move_ids.state', 'not in', ['done','cancel'])]">
                 </filter>
             </search>
         </field>
     </record>
   
+
     <record id="view_product_reception_tree" model="ir.ui.view">
             <field name="name">purchase.order.line.tree_cloud</field>
             <field name="model">purchase.order.line</field>
@@ -32,9 +33,8 @@
             <field name="arch" type="xml">
                 <tree string="Productos" create="false">
                     <field name="order_id"/>
-                    <field name="name"/>
-                    <field name="partner_id" string="Vendor" />
                     <field name="product_id"/>
+                    <field name="partner_id" string="Vendor" />
                     <field name="state"/>
                 </tree>
             </field>
