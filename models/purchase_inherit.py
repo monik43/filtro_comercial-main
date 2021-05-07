@@ -6,9 +6,14 @@ class purchaseorder(models.Model):
     _inherit = 'purchase.order'
 
     partner_ref_eti = fields.Char()
-    move_state = fields.Char()
-    move_state = self.move_ids.state
+    move_state = fields.Char(compute='assign_movement_state')
+
+    @api.depends('move_ids')
+    def _assign_movement_state(self):
+        move_state = self.move_ids.state
     
+    assign_movement_state()
+
     @api.multi
     def report_etiqueta_purchase_order(self):
         if 'partner_ref' in self.env['purchase.order']._fields:
