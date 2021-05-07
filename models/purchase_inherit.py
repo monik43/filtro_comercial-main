@@ -7,7 +7,7 @@ class purchaseorder(models.Model):
 
     partner_ref_eti = fields.Char()
     move_state = fields.Char()
-    move_state = move_ids.state
+    move_state = self.move_ids.state
     
     @api.multi
     def report_etiqueta_purchase_order(self):
