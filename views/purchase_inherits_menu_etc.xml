@@ -29,6 +29,7 @@
     <record id="view_product_reception_tree" model="ir.ui.view">
             <field name="name">purchase.order.line.tree_cloud</field>
             <field name="model">purchase.order.line</field>
+            <field name="context">{"product_reception_search_view":1}</field>
             <field name="priority" eval="10"/>
             <field name="arch" type="xml">
                 <tree string="Productos" create="false">
