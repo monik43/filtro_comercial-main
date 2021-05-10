@@ -19,8 +19,8 @@
         <field name="model">purchase.order.line</field>
         <field name="arch" type="xml">
             <search string="Product Search">
-                <field name="product_id" string="Busqueda recepcion producto" filter_domain="[('move_state', 'not in', ['done','cancel'])]"/>
-                <filter name="product_state_search" string="Product state" domain="[('move_state', 'not in', ['done','cancel'])]"/>
+                <field name="product_id" string="Busqueda recepcion producto" filter_domain="[('move_ids.state', 'not in', ['done','cancel'])]"/>
+                <filter name="product_state_search" string="Product state" domain="[('move_ids.state', 'not in', ['done','cancel'])]"/>
             </search>
         </field>
     </record>
