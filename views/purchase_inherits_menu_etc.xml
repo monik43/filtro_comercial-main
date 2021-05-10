@@ -35,7 +35,7 @@
                     <field name="order_id"/>
                     <field name="product_id"/>
                     <field name="partner_id" string="Vendor" />
-                    <field name="move_state"/>
+                    <field name="move_ids.state"/>
                 </tree>
             </field>
     </record>
