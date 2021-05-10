@@ -28,7 +28,7 @@ class purchaseorderline(models.Model):
 
     #move_state = fields.Char(compute='_assign_movement_state')
 
-    @api_multi
+    @api.multi
     def debug(self):
         print(self.move_ids.state)
 
