@@ -25,3 +25,9 @@ class purchaseorder(models.Model):
 
 class purchaseorderline(models.Model):
     _inherit = 'purchase.order.line' 
+
+    move_state = fields.Char(compute='_assign_movement_state')
+
+    @api.depends('move_ids')
+    def _assign_movement_state(self):
+        move_state = self.move_ids.state[0]
