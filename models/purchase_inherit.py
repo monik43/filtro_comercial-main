@@ -30,7 +30,7 @@ class purchaseorderline(models.Model):
 
     @api.multi
     def debug(self):
-        print(self.move_ids.state)
+        print(self.move_ids.state, + "/"*50)
 
     #@api.depends('move_ids')
     #def _assign_movement_state(self):
