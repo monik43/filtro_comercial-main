@@ -39,7 +39,7 @@
                     <field name="state"/>
                 </tree>
             </field>
-        </record>
+    </record>
 
     <menuitem 
         id="reception_root" 
