@@ -6,7 +6,7 @@ class purchaseorder(models.Model):
     _inherit = 'purchase.order'
 
     partner_ref_eti = fields.Char()
-    move_state = fields.Char(compute='assign_movement_state')
+    move_state = fields.Char(compute='_assign_movement_state')
 
     @api.depends('move_ids')
     def _assign_movement_state(self):
