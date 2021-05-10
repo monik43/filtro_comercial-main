@@ -8,7 +8,7 @@ class purchaseorder(models.Model):
     partner_ref_eti = fields.Char()
     move_state = fields.Char(compute='_assign_movement_state')
 
-    @api.depends('move_ids')
+    #@api.depends('move_ids')
     def _assign_movement_state(self):
         move_state = self.move_ids.state
 
