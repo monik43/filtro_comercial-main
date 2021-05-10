@@ -28,10 +28,6 @@ class purchaseorderline(models.Model):
 
     move_state = fields.Char(compute='_assign_movement_state')
 
-    @api.multi
-    def debug(self):
-        print(self.move_ids.state,"/"*50)
-
     @api.depends('move_ids')
     def _assign_movement_state(self):
         self.ensure_one()
