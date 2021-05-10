@@ -30,4 +30,5 @@ class purchaseorderline(models.Model):
 
     @api.depends('move_ids')
     def _assign_movement_state(self):
-        move_state = self.move_ids[0].state
+        self.ensure_one()
+        move_state = self.move_ids.state
