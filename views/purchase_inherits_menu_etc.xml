@@ -19,9 +19,8 @@
         <field name="model">purchase.order.line</field>
         <field name="arch" type="xml">
             <search string="Product Search">
-                <filter string="Product state" name="product_state_search" domain="[('move_state', 'not in', ['done','cancel'])]">
-                </filter>
                 <field name="product_id" string="Busqueda recepcion producto" filter_domain="[('move_state', 'not in', ['done','cancel'])]"/>
+                <filter name="product_state_search" string="Product state" domain="[('move_state', 'not in', ['done','cancel'])]"/>
             </search>
         </field>
     </record>
@@ -30,14 +29,13 @@
     <record id="view_product_reception_tree" model="ir.ui.view">
             <field name="name">purchase.order.line.tree_cloud</field>
             <field name="model">purchase.order.line</field>
-            <field name="context">{"product_reception_search_view":1}</field>
             <field name="priority" eval="10"/>
             <field name="arch" type="xml">
                 <tree string="Productos" create="false">
                     <field name="order_id"/>
                     <field name="product_id"/>
                     <field name="partner_id" string="Vendor" />
-                    <field name="state"/>
+                    <field name="move_state"/>
                 </tree>
             </field>
     </record>
