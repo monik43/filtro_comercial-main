@@ -63,7 +63,10 @@ class purchaseorderline(models.Model):
             'done': hecho
             }
 
-            return switcher_state[state]
+            if state == False:
+                return 'no_state'
+            else:
+                return switcher_state[state]
 
         for record in self:
 
