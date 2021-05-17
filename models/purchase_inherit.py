@@ -30,5 +30,41 @@ class purchaseorderline(models.Model):
 
     @api.depends('move_ids')
     def _assign_movement_state(self):
+
+        def nuevo():
+            return 'Nuevo'
+
+        def esperando_movimiento():
+            return 'Esperando movimiento'
+
+        def esperando_disponibilidad():
+            return 'Esperando disponibilidad'
+
+        def parcialmente_disponible():
+            return 'Parcialmente disponible'
+
+        def reservado():
+            return 'Reservado'
+
+        def cancelado():
+            return 'Cancelado'
+
+        def hecho():
+            return 'Hecho'
+
+        def get_state(state):
+            switcher_state = {
+            'draft': nuevo,
+            'waiting': esperando_movimiento,
+            'confirmed': esperando_disponibilidad,
+            'partially_avaliable': parcialmente_disponible,
+            'assigned': reservado,
+            'cancel': cancelado,
+            'done': hecho
+            }
+
+            return switcher_state.get(state, lambda: 'error')
+
         for record in self:
-            record.move_state = record.move_ids.state
+
+            record.move_state = get_state(record.move_ids.state)
