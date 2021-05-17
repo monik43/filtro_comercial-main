@@ -26,7 +26,7 @@ class purchaseorder(models.Model):
 class purchaseorderline(models.Model):
     _inherit = 'purchase.order.line' 
 
-    move_state = fields.Char(compute='_assign_movement_state')
+    move_state = fields.Char(String = 'Estado', compute='_assign_movement_state')
 
     @api.depends('move_ids')
     def _assign_movement_state(self):
@@ -53,7 +53,7 @@ class purchaseorderline(models.Model):
             return 'Hecho'
 
         def get_state(state):
-            
+
             switcher_state = {
                 'draft': nuevo(),
                 'waiting': esperando_movimiento(),
