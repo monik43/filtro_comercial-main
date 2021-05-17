@@ -63,7 +63,7 @@ class purchaseorderline(models.Model):
             'done': hecho
             }
 
-            return switcher_state.get(state)
+            return switcher_state[state]
 
         for record in self:
 
