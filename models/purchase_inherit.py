@@ -67,5 +67,5 @@ class purchaseorderline(models.Model):
 
         for record in self:
 
-            record.move_state = record.move_ids.state
+            record.move_state = get_state(str(record.move_ids.state))
             print(record.move_state)
