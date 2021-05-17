@@ -26,7 +26,7 @@ class purchaseorder(models.Model):
 class purchaseorderline(models.Model):
     _inherit = 'purchase.order.line' 
 
-    move_state = fields.Char(String = 'Estado', compute='_assign_movement_state')
+    move_state = fields.Char(compute='_assign_movement_state')
 
     @api.depends('move_ids')
     def _assign_movement_state(self):
@@ -69,4 +69,3 @@ class purchaseorderline(models.Model):
         for record in self:
 
             record.move_state = get_state(record.move_ids.state)
-            print(record.move_state)
