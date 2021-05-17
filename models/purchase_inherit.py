@@ -54,19 +54,19 @@ class purchaseorderline(models.Model):
 
         def get_state(state):
             switcher_state = {
-            'draft': nuevo,
-            'waiting': esperando_movimiento,
-            'confirmed': esperando_disponibilidad,
-            'partially_avaliable': parcialmente_disponible,
-            'assigned': reservado,
-            'cancel': cancelado,
-            'done': hecho
+            'draft': nuevo(),
+            'waiting': esperando_movimiento(),
+            'confirmed': esperando_disponibilidad(),
+            'partially_avaliable': parcialmente_disponible(),
+            'assigned': reservado(),
+            'cancel': cancelado(),
+            'done': hecho()
             }
 
             if state == False:
                 return 'no_state'
             else:
-                return switcher_state[str(state)]
+                return switcher_state[state]
 
         for record in self:
 
