@@ -66,7 +66,7 @@ class purchaseorderline(models.Model):
             if state == False:
                 return 'no_state'
             else:
-                return switcher_state[state]
+                return switcher_state[str(state)]
 
         for record in self:
 
