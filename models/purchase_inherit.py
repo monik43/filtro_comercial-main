@@ -12,19 +12,18 @@ class purchaseorder(models.Model):
 
         for record in self:
 
-            self.partner_ref_eti = self.partner_ref
+            record.partner_ref_eti = record.partner_ref
 
-            if self.partner_ref != "":
+            if record.partner_ref != "":
+                if record.partner_ref_eti.startswith('#'):
 
-                if self.partner_ref_eti.startswith('#'):
+                    record.partner_ref_eti = record.partner_ref_eti[1:]
 
-                    self.partner_ref_eti = self.partner_ref_eti[1:]
+                if len(record.partner_ref_eti) > 17:
 
-                if len(self.partner_ref_eti) > 17:
+                    record.partner_ref_eti = record.partner_ref_eti[:17]
 
-                    self.partner_ref_eti = self.partner_ref_eti[:17]
-
-        print(self.partner_ref_eti)
+        print(record.partner_ref_eti)
 
     @api.multi
     def report_etiqueta_purchase_order(self):
