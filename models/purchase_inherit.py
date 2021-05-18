@@ -9,29 +9,29 @@ class purchaseorder(models.Model):
 
     @api.depends('partner_ref')
     def _assign_printable_ref(self):
-        if 'partner_ref' in self.env['purchase.order']._fields:
-            
-            for record in self:
 
-                self.partner_ref_eti = self.partner_ref
+        for record in self:
 
-                if self.partner_ref_eti.startswith('#'):
+            self.partner_ref_eti = self.partner_ref
 
-                    self.partner_ref_eti = self.partner_ref_eti[1:]
+            if self.partner_ref_eti.startswith('#'):
 
-                if len(self.partner_ref_eti) > 17:
+                self.partner_ref_eti = self.partner_ref_eti[1:]
 
-                    self.partner_ref_eti = self.partner_ref_eti[:17]
+            if len(self.partner_ref_eti) > 17:
 
-            print(self.partner_ref_eti)
+                self.partner_ref_eti = self.partner_ref_eti[:17]
+
+        print(self.partner_ref_eti)
 
     @api.multi
     def report_etiqueta_purchase_order(self):
-        
+
         return self.env.ref('filtro_comercial-main.cd_report_etiqueta_purchase_order').report_action(self)
 
+
 class purchaseorderline(models.Model):
-    _inherit = 'purchase.order.line' 
+    _inherit = 'purchase.order.line'
 
     move_state = fields.Char(compute='_assign_movement_state')
 
@@ -70,7 +70,7 @@ class purchaseorderline(models.Model):
                 'cancel': cancelado(),
                 'done': hecho()
             }
-            
+
             return switcher_state.get(state, 'Sin estado')
 
         for record in self:
