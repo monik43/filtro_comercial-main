@@ -23,7 +23,7 @@
         'views/purchase_order_add_btn.xml',
         'views/purchase_inherits_menu_etc.xml',
         #'views/purchase_order_line_menu.xml',
-        #'views/stock_picking_add_btn.xml',
+        'views/stock_picking_add_btn.xml',
         'report/cloudalia_report_etiqueta_sat.xml',
         'report/cloudalia_report_etiqueta_po.xml'
         #'report/cloudalia_report_etiqueta_stock.xml'
