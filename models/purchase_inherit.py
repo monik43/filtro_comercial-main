@@ -14,13 +14,15 @@ class purchaseorder(models.Model):
 
             self.partner_ref_eti = self.partner_ref
 
-            if self.partner_ref_eti.startswith('#'):
+            if self.partner_ref_eti != "":
 
-                self.partner_ref_eti = self.partner_ref_eti[1:]
+                if self.partner_ref_eti.startswith('#'):
 
-            if len(self.partner_ref_eti) > 17:
+                    self.partner_ref_eti = self.partner_ref_eti[1:]
 
-                self.partner_ref_eti = self.partner_ref_eti[:17]
+                if len(self.partner_ref_eti) > 17:
+
+                    self.partner_ref_eti = self.partner_ref_eti[:17]
 
         print(self.partner_ref_eti)
 
