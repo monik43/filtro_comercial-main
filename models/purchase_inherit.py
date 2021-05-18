@@ -14,7 +14,7 @@ class purchaseorder(models.Model):
 
             record.partner_ref_eti = record.partner_ref
 
-            if record.partner_ref != "":
+            if record.partner_ref:
                 if record.partner_ref_eti.startswith('#'):
 
                     record.partner_ref_eti = record.partner_ref_eti[1:]
