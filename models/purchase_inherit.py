@@ -15,6 +15,7 @@ class purchaseorder(models.Model):
             record.partner_ref_eti = record.partner_ref
 
             if record.partner_ref:
+
                 if record.partner_ref_eti.startswith('#'):
 
                     record.partner_ref_eti = record.partner_ref_eti[1:]
@@ -23,7 +24,7 @@ class purchaseorder(models.Model):
 
                     record.partner_ref_eti = record.partner_ref_eti[:17]
 
-        print(record.partner_ref_eti)
+        print(record.purchase_ship_order)
 
     @api.multi
     def report_etiqueta_purchase_order(self):
