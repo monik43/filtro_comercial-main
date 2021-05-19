@@ -24,8 +24,6 @@ class purchaseorder(models.Model):
 
                     record.partner_ref_eti = record.partner_ref_eti[:17]
 
-        print("\/"*10,record.purchase_ship_order)
-
     @api.multi
     def report_etiqueta_purchase_order(self):
 

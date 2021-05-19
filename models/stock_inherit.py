@@ -8,6 +8,7 @@ class stockpicking(models.Model):
     @api.multi
     def report_etiqueta_stock_label(self):
         purchase_order = self.env['purchase.order'].search([('picking_ids', '=', self.id)])
+        print("\/"*10,self.purchase_ship_order)
         return self.env.ref('filtro_comercial-main.cd_report_etiqueta_purchase_order').report_action(purchase_order)
     
 class stockpickingtype(models.Model):
